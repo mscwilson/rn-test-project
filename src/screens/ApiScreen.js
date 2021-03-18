@@ -1,27 +1,26 @@
 import React from 'react';
-import { useState } from 'react'
+import { useState } from 'react';
 import { StyleSheet, View, Button, Text } from 'react-native';
-import JsonPlaceholder from '../api/JsonPlaceholder'
-import LatinText from '../components/LatinText'
+import JsonPlaceholder from '../api/JsonPlaceholder';
+import LatinText from '../components/LatinText';
 
 const ApiScreen = () => {
-  const [results, setResults] = useState("");
+  const [results, setResults] = useState('');
 
   const testApi = async () => {
     const response = await JsonPlaceholder.get();
-    setResults(response.data)
-  }
+    setResults(response.data);
+  };
 
   return (
     <View>
       <Text>On API screen</Text>
-      <Button title="click here" onPress={testApi}/>
+      <Button title="click here" onPress={testApi} />
       <Text>Result: {results.title}</Text>
       <Text>{results.body}</Text>
     </View>
-  )
-}
-
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

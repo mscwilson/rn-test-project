@@ -13,25 +13,26 @@ export default class FetchGetExample extends React.Component {
   }
 
   componentDidMount() {
-    return axios.get("https://jsonplaceholder.typicode.com/posts/1")
-      .then(response => response.json())
-      .then(responseJson => {
+    return axios
+      .get('https://jsonplaceholder.typicode.com/posts/1')
+      .then((response) => response.json())
+      .then((responseJson) => {
         this.setState(
           {
             isLoading: false,
             dataSource: responseJson,
           },
-          function() {}
+          function () {},
         );
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   }
 
   render() {
-    if(this.state.isLoading) {
-      return(
+    if (this.state.isLoading) {
+      return (
         <View style={{ flex: 1, padding: 20 }}>
           <ActivityIndicator />>
         </View>
@@ -43,14 +44,14 @@ export default class FetchGetExample extends React.Component {
         <FlatList
           data={this.state.dataSource}
           // ItemSeparatorComponent = {this.FlatListItemSeparator}
-          renderItem= {({item}) => (
+          renderItem={({ item }) => (
             <Text>
               text
               {item.title}, {item.body}
             </Text>
           )}
-          keyExtractor = {(item) => item.id.toString()}
-          />
+          keyExtractor={(item) => item.id.toString()}
+        />
       </View>
     );
   }
