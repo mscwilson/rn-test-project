@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import JsonPlaceholder from '../api/JsonPlaceholder';
+import { View, Text } from 'react-native';
+import axios from 'axios';
 
 class LatinText extends Component {
   constructor(props) {
@@ -12,12 +12,13 @@ class LatinText extends Component {
   }
 
   async componentDidMount() {
-    console.log('here in componentDidMount');
     try {
-      const response = await JsonPlaceholder.get();
+      const response = await axios.get(
+        'https://jsonplaceholder.typicode.com/posts/1',
+      );
       this.setState({
         isLoading: false,
-        data: response,
+        data: response.data,
       });
     } catch (error) {
       console.error(error);
@@ -25,7 +26,12 @@ class LatinText extends Component {
   }
 
   render() {
-    return <View>{this.state.data}</View>;
+    return (
+      <View>
+        <Text>{this.state.data.title}</Text>
+        <Text>Hello from LatinText</Text>
+      </View>
+    );
   }
 }
 

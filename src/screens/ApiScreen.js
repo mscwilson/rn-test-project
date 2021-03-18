@@ -5,19 +5,12 @@ import JsonPlaceholder from '../api/JsonPlaceholder';
 import LatinText from '../components/LatinText';
 
 const ApiScreen = () => {
-  const [results, setResults] = useState('');
-
-  const testApi = async () => {
-    const response = await JsonPlaceholder.get();
-    setResults(response.data);
-  };
 
   return (
     <View>
       <Text>On API screen</Text>
-      <Button title="click here" onPress={testApi} />
-      <Text>Result: {results.title}</Text>
-      <Text>{results.body}</Text>
+      <Text>and from LatinText:</Text>
+      <LatinText />
     </View>
   );
 };
