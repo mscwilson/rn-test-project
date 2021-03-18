@@ -1,16 +1,17 @@
 import React from 'react';
+import axios from 'axios';
 import { useState } from 'react';
 import { StyleSheet, View, Button, Text } from 'react-native';
-import JsonPlaceholder from '../api/JsonPlaceholder';
-import LatinText from '../components/LatinText';
+import LicensePlate from '../components/LicensePlate';
 
 const LicensePlateScreen = () => {
+  const VehicleApi = async () => {};
 
   return (
     <View>
       <Text>On API screen</Text>
-      <Text>and from LatinText:</Text>
-      <LatinText />
+      <Text>and from LicensePlate:</Text>
+      <LicensePlate />
     </View>
   );
 };
