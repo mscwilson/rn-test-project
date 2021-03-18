@@ -6,8 +6,12 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text>This is the Home Screen</Text>
       <Button
-        title="Go to API screen"
-        onPress={() => navigation.navigate('Api')}
+        title="Go to Latin screen"
+        onPress={() => navigation.navigate('Latin')}
+      />
+      <Button
+        title="Go to License Plate screen"
+        onPress={() => navigation.navigate('Vin')}
       />
     </View>
   );

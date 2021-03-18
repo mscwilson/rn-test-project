@@ -4,7 +4,7 @@ import { StyleSheet, View, Button, Text } from 'react-native';
 import JsonPlaceholder from '../api/JsonPlaceholder';
 import LatinText from '../components/LatinText';
 
-const ApiScreen = () => {
+const LatinScreen = () => {
 
   return (
     <View>
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ApiScreen;
+export default LatinScreen;
