@@ -5,7 +5,6 @@ import JsonPlaceholder from '../api/JsonPlaceholder';
 import LatinText from '../components/LatinText';
 
 const LatinScreen = () => {
-
   return (
     <View>
       <Text>On API screen</Text>

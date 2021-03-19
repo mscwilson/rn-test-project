@@ -1,17 +1,16 @@
 import React from 'react';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useFocusEffect } from '@react-navigation/native';
 import { StyleSheet, View, Button, Text } from 'react-native';
 import LicensePlate from '../components/LicensePlate';
+import secrets from '../../secrets';
 
 const LicensePlateScreen = () => {
-  const VehicleApi = async () => {};
-
   return (
     <View>
       <Text>On API screen</Text>
       <Text>and from LicensePlate:</Text>
-      <LicensePlate />
+      <LicensePlate vin={'YP12TVY'} />
     </View>
   );
 };
