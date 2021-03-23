@@ -13,6 +13,10 @@ const HomeScreen = ({ navigation }) => {
         title="Go to License Plate screen"
         onPress={() => navigation.navigate('Vin')}
       />
+      <Button
+        title="Go to Spring Onion screen"
+        onPress={() => navigation.navigate('Spring Onion')}
+      />
     </View>
   );
 };
